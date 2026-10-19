@@ -4,12 +4,23 @@ const cors = require('cors');
 const db = require('./db');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const fields = [
+  'owner_name',
+  'headline',
+  'bio',
+  'email',
+  'location',
+  'skills',
+  'projects',
+  'linkedin_url',
+  'github_url'
+];
 
 app.use(cors());
 app.use(express.json());
 app.get('/', (_req, res) => res.json({ message: 'Portfolio API is running', endpoints: ['/api/portfolio', '/api/portfolio/:id'] }));
 
-c;
+
 function validate(body) {
   if (!body.owner_name || !String(body.owner_name).trim()) return 'owner_name is required';
   if (!body.headline || !String(body.headline).trim()) return 'headline is required';
