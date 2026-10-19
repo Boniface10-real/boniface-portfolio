@@ -1,61 +1,81 @@
-# Boniface Chikomo — Full-Stack Portfolio (ICT251 Activity 4)
+Boniface Chikomo — Cyber Security Portfolio
 
-This project implements Question 11, Portfolio Landing Page, using a single SQLite table and a Node.js/Express REST API.
+A personal portfolio website built to showcase my background, skills, projects, and professional interests as a Cyber Security student at Mulungushi University, Zambia.
 
-## Requirements
-- Node.js installed
-- VS Code (recommended)
-- Postman for endpoint testing
+Features
 
-## 1. Start the backend
-Open a terminal in VS Code and run:
+- View portfolio information
+- Display skills and projects
+- Create portfolio records
+- Update existing records
+- Delete portfolio records
+- REST API built with Node.js and Express
+- SQLite database for storing portfolio information
 
-```powershell
+Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Node.js
+- Express.js
+- SQLite
+- Git and GitHub
+
+Project Structure
+
+boniface-portfolio/
+├── backend/
+│   ├── db.js
+│   ├── schema.sql
+│   ├── server.js
+│   ├── package.json
+│   └── .env.example
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── .gitignore
+└── README.md
+
+Running the Project Locally
+
+1. Requirements
+
+Install Node.js and npm on your computer.
+
+2. Install backend dependencies
+
+Open a terminal in the project folder and run:
+
 cd backend
 npm install
-Copy-Item .env.example .env
+
+3. Start the API
+
 npm start
-```
 
-If using Command Prompt rather than PowerShell, use `copy .env.example .env` instead of `Copy-Item`.
+The API should run at:
 
-The API runs at `http://localhost:3000`. The SQLite database `portfolio.db` is created automatically, the table is created from `schema.sql`, and ten sample records are inserted on first run.
+"http://localhost:3000"
 
-## 2. Open the frontend
-Open `frontend/index.html` in your browser. For a better local development experience, use the VS Code Live Server extension. Keep the backend terminal running. The frontend talks to `http://localhost:3000/api/portfolio`.
+4. Open the frontend
 
-## 3. API endpoints for Postman
-Use `http://localhost:3000` as the base URL. All responses are JSON.
+Open "frontend/index.html" in your browser, or use the local frontend setup configured for this project.
 
-| Method | URL | Purpose |
-|---|---|---|
-| GET | `/api/portfolio` | List all records |
-| GET | `/api/portfolio/1` | Get one record |
-| POST | `/api/portfolio` | Create a record |
-| PUT | `/api/portfolio/1` | Update record 1 |
-| DELETE | `/api/portfolio/1` | Delete record 1 |
+API Endpoints
 
-### POST request body (Body → raw → JSON)
-```json
-{
-  "owner_name": "Boniface Chikomo",
-  "headline": "Cyber Security Student",
-  "bio": "I am a Cyber Security student at Mulungushi University interested in ethical hacking and digital safety.",
-  "email": "your-email@example.com",
-  "location": "Zambia",
-  "skills": "Python, Networking, Cybersecurity fundamentals",
-  "projects": "Personal Portfolio Website, Python Practice",
-  "linkedin_url": "",
-  "github_url": ""
-}
-```
+Method| Endpoint| Purpose
+GET| "/api/portfolio"| Retrieve all portfolio records
+GET| "/api/portfolio/:id"| Retrieve one record
+POST| "/api/portfolio"| Create a record
+PUT| "/api/portfolio/:id"| Update a record
+DELETE| "/api/portfolio/:id"| Delete a record
 
-For PUT, use the same JSON body at `/api/portfolio/1` and change one field to show it updated. Test DELETE last, because it removes the record. Use GET after POST/PUT/DELETE to verify the changes. Capture screenshots or a screen recording of the method, URL, request body where applicable, and JSON response as your assignment asks.
+Author
 
-## Database fields
-`id` (auto-increment primary key), `owner_name`, `headline`, `bio`, `email`, `location`, `skills`, `projects`, `linkedin_url`, `github_url`, `created_at`, `updated_at`.
+Boniface Chikomo
+Cyber Security Student
+Mulungushi University, Zambia
 
-## Important before submission
-- Replace `your-email@example.com` with your real email if you want it displayed.
-- The ten seed rows are demonstration data. Keep the records relevant to the assignment and use your own authentic portfolio information.
-- The assignment mentions cloud deployment. This project is configured for local testing first. SQLite file persistence and deployment requirements depend on the hosting provider; do not claim the app is deployed until you have deployed and tested it and can share the real URL.
+GitHub: https://github.com/Boniface10-real
