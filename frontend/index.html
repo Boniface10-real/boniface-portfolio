@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boniface Chikomo | Cyber Security Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar"><a class="brand" href="#home">BC<span>.</span></a>
+    <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#manage">Manage
+        records</a></nav>
+  </header>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CYBER SECURITY STUDENT · ZAMBIA</p>
+        <h1>Hi, I'm <span>Boniface Chikomo.</span></h1>
+        <p class="lead">Learning to make the digital world safer, one step at a time.</p>
+        <p class="intro">I study Cyber Security at Mulungushi University and enjoy exploring ethical hacking, computer
+          networks, programming and digital safety.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore my work</a><a class="btn secondary"
+            href="#manage">Manage portfolio</a></div>
+      </div>
+      <div class="hero-card">
+        <div class="avatar">BC</div>
+        <p class="card-label">CURRENT FOCUS</p>
+        <h2>Cybersecurity &amp; Web Development</h2>
+        <p>Building my foundation through study, practice and small projects.</p>
+        <div class="status"><span></span> Always learning</div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <p class="eyebrow">A LITTLE ABOUT ME</p>
+      <h2>Curiosity today. Stronger skills tomorrow.</h2>
+      <p class="section-copy">I am a first-year Bachelor of Science in Cyber Security student at Mulungushi University.
+        My goal is to grow into a responsible cybersecurity professional who helps protect systems, networks and digital
+        information. I believe consistent practice and a willingness to learn are important parts of the journey.</p>
+    </section>
+    <section id="skills" class="section tinted">
+      <p class="eyebrow">WHAT I'M LEARNING</p>
+      <h2>Skills &amp; interests</h2>
+      <div class="chips"><span>Cybersecurity fundamentals</span><span>Python programming</span><span>Computer
+          networking</span><span>HTML &amp; CSS</span><span>JavaScript
+          basics</span><span>Problem-solving</span><span>Digital safety</span><span>Ethical hacking concepts</span>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <p class="eyebrow">PRACTICE IN ACTION</p>
+      <h2>Projects &amp; learning</h2>
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-number">01</div>
+          <h3>Personal Portfolio Website</h3>
+          <p>A full-stack portfolio project built with HTML, CSS, JavaScript, Node.js, Express and SQLite.</p><span>Web
+            development</span>
+        </article>
+        <article class="project">
+          <div class="project-number">02</div>
+          <h3>Python Practice</h3>
+          <p>Small exercises to strengthen programming logic, problem-solving and confidence with code.</p>
+          <span>Programming</span>
+        </article>
+        <article class="project">
+          <div class="project-number">03</div>
+          <h3>Cyber Awareness</h3>
+          <p>Learning and sharing practical ideas about passwords, phishing and safer digital habits.</p>
+          <span>Cybersecurity</span>
+        </article>
+      </div>
+    </section>
+    <section id="manage" class="section tinted">
+      <p class="eyebrow">DATABASE CRUD DEMO</p>
+      <h2>Manage portfolio records</h2>
+      <p class="section-copy">This form uses the Node.js API to create, read, update and delete portfolio records stored
+        in SQLite.</p>
+      <div class="manager">
+        <form id="portfolio-form"><input type="hidden" id="record-id" />
+          <div class="form-grid"><label>Owner name *<input id="owner_name" required
+                placeholder="Boniface Chikomo" /></label><label>Headline *<input id="headline" required
+                placeholder="Cyber Security Student" /></label><label>Email<input id="email" type="email"
+                placeholder="you@example.com" /></label><label>Location<input id="location"
+                placeholder="Zambia" /></label><label class="wide">Bio *<textarea id="bio" required rows="3"
+                placeholder="Write a short introduction..."></textarea></label><label class="wide">Skills<input
+                id="skills" placeholder="Python, Networking, Cybersecurity" /></label><label class="wide">Projects<input
+                id="projects" placeholder="Portfolio Website, Python Practice" /></label><label>LinkedIn URL<input
+                id="linkedin_url" type="url" placeholder="https://linkedin.com/in/..." /></label><label>GitHub URL<input
+                id="github_url" type="url" placeholder="https://github.com/..." /></label></div>
+          <div class="actions"><button class="btn primary" type="submit" id="save-button">Save record</button><button
+              class="btn secondary" type="button" id="reset-button">Clear form</button></div>
+          <p id="form-message" role="status"></p>
+        </form>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Owner / headline</th>
+                <th>Location</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="records">
+              <tr>
+                <td colspan="4">Loading records...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Boniface Chikomo · Built for learning and growth.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
