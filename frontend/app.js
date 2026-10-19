@@ -1,5 +1,5 @@
 // Change this URL if your API is deployed to a hosting service.
-const API_URL = 'http://localhost:3000/api/portfolio';
+const API_URL = 'https://boniface-portfolio.onrender.com/api/portfolio';
 const form = document.getElementById('portfolio-form');
 const recordId = document.getElementById('record-id');
 const recordsBody = document.getElementById('records');
