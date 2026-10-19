@@ -1,10 +1,26 @@
+# Dependencies
 node_modules/
+
+# Environment variables
 .env
 .env.*
 !.env.example
 backend/.env
+
+# Database files
 backend/*.db
 backend/*.db-shm
 backend/*.db-wal
 *.sqlite
 *.sqlite3
+
+# VS Code settings
+.vscode/
+
+# Build outputs
+dist/
+build/
+
+# Python cache
+__pycache__/
+*.py[cod]
